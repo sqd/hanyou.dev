@@ -1,16 +1,22 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: "TODO: Take a good selfie and put it here"
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+![Hey!](img/me.jpeg)
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+My name is Han You. I do stuffs.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Stuffs I do:
+1. Algorithm stuffs
+2. Random computer science stuffs, especially
+  - type theory/PLT, especially Haskell witchcraft
+  - distributed system
+  - compiler (code generation, optimization)
+3. Acoustic fingerstyle guitar stuffs
+4. Outdoor stuffs: skiing, hiking & camping, road biking
+5. Gaming stuffs, especially
+  - City games: Cities Skyline, SimCity, Cities in Motion, etc (I have plan to make one of my own actually!)
+  - Building/Planning/Managing games: Prison Architect, Rimworld, Factorio, etc
+  - Paradox
