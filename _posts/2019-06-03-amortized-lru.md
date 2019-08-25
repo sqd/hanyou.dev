@@ -3,7 +3,7 @@ title: "Amortized LRU Cache (Now WITHOUT Linked List!)"
 date: 2019-06-03 17:51:00
 tags: "Data Structure"
 ---
-So I was doing LeetCode out of boredom. As you probably know LRU cache is a common interview question and LeetCode of course carries it. Just for the record, I know that the canonical way of doing this is using a hashmap with a linked list, but to implement a generic linked list correctly is somewhat unpleasant when there are special cases such as deleting from the head.
+As you probably know LRU cache is a common interview question. Just for the record, I know that the canonical way of doing this is using a hashmap with a linked list, but to implement a generic linked list correctly is somewhat unpleasant when there are special cases such as deleting from the head.
 
 Anyway, I came up with this LRU cache implementation that also works in constant time without having to use a linked list. The code should be pretty straight-forward with the comments.
 

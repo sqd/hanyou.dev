@@ -1,5 +1,5 @@
 ---
-title: "What does Haskell RankNTypes do?"
+title: "What does Haskell RankNTypes do? (1) - Semantics"
 date: 2019-02-26 22:33:26
 tags: "Haskell"
 ---
@@ -33,8 +33,3 @@ In `foo`, because `x` is bound at the very beginning, it is scoped over the whol
 Back to `tuple2Int`. What type should the compiler assign to `x`? It sees that `a` can be applied to `x -> Int`, so `a` and `x` must be the same. Similar deduction goes for `b` and `x`. Therefore, unless `a` and `b` are the same type, we would have a type contradiction.
 
 Now make sure that you understand the problem, and we'll proceed to its solution.
-
-### Even Deeper
-What's _actually_ going on?
-
-Internally, Haskell functions with type variables [TODO: finish this]

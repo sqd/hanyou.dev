@@ -1,6 +1,6 @@
 ---
 title: "Yet Another Method to Generate Permutations"
-date: 2019-08-06 11:58:54
+date: 2019-02-06 11:58:54
 tags: "Algorithm"
 ---
 There are tons of methods to generate every permutation of some elements. And here's another intuitive and efficient one.
