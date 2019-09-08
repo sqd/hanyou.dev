@@ -28,7 +28,7 @@ One of the minimum covers of 5 rectangles:
 
 It seems that what we do is pretty simple in this case:
 
-```
+```python
 def minimum_cover(mountain):
   while mountain is not empty:
     rectangle = extend the bottom row up, make it as high as possible
@@ -53,7 +53,7 @@ Thus in every step of our algorithm, we are adding a rectangle that is **absolut
 
 Now back to the original problem. In the same vein, I propose this algorithm before proving that it is optimal:
 
-```
+```python
 for x = 1..n:
   for y = 1..n:
     if M[x, y] == false:
@@ -129,7 +129,7 @@ Thus, every $R$ selected by our algorithm is in an optimal solution about the po
 
 What about time complexity? This analysis is actually a breeze compared to proving its optimality. For the sake of your mouse scroll button I copy the code down here:
 
-```
+```python
 for x = 1..n:
   for y = 1..n:
     if M[x, y] == false:
