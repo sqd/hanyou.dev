@@ -3,7 +3,7 @@ title: "Yet Another Method to Generate Permutations"
 date: 2019-02-06 11:58:54
 tags: "Algorithm"
 ---
-There are tons of methods to generate every permutation of some elements. And here's another intuitive and efficient one.
+There are tons of methods to generate every permutation of some elements. And here's another intuitive and efficient (beats 98.00% of submissions on LeetCode) one I came up with.
 
 Suppose we have $N$ elements $a_1, a_2 ... a_N$ and $answer$ is a 1-index (yeah, burn me) list sized $n!$ (so it can just hold all of the permutations). Suppose that we also have function $f(n)$ which fills $answer[1..n!]$ with the permutation of $a_1, a_2 ... a_n$. Thus if we call $f(1), f(2) ... f(N)$ in sequence, $answer$ should hold what we want.
 
@@ -11,7 +11,7 @@ $f(1)$ is pretty simple. We simply set $answer[1] = [a_1]$.
 
 When we are calling $f(n)$, we know that $f(n-1)$ has been called and $answer[1..(n-1)!] = P$ already holds the permutations of $a_1...a_{n-1}$. We observe that for each permutation $p$ in $P$, if we replace any of $p_i$ with $a_n$ and put $p_i$ in the back instead, we get a new unique (obviously) permutation of $a_1...a_n$:
 \\[
-    [p_1, p_2 ... p_i ... p_{n-1}] \rightarrow [p_1, p_2 ... a_n ... p_{n-1}, p_i]
+    [p_1, p_2 ... p_{i-1}, p_i, p_{i+1} ... p_{n-1}] \rightarrow [p_1, p_2 ... p_{i-1}, a_n, p_{i+1} ... p_{n-1}, p_i]
 \\]
 
 Note that we can also change nothing and just append $a_n$ to the back.
@@ -34,12 +34,12 @@ def permute(a):
         for i in range(len(answer)):
             # j = [0, n)
             for j in range(n):
+                new_perm = answer[i] + [a[n]]
                 # "replacing" step
-                new_perm = list(answer[i]) + [a[n]]
                 new_perm[j], new_perm[-1] = new_perm[-1], new_perm[j]
                 answer.append(new_perm)
                 
-            # change nothing and just append a[n]
+            # the one for which we change nothing and just append a[n]
             answer[i].append(a[n])
 
     return answer
